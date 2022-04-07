@@ -1,0 +1,705 @@
+@import './resets';
+@import './colours';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Vollkorn:ital,wght@1,400;1,600;1,700&display=swap');
+@font-face { font-family: Delicious; src: url('Helvetica Neue LTW0697BlkCnObl.otf'); }
+
+
+@mixin flexCenter($justify, $align) {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+            justify-content: $justify;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+            align-items: $align;
+}
+
+@mixin gradient {
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.gradient {
+    @include gradient();
+}
+.gradient2 {
+    background: linear-gradient(to right, #30CFD0 0%, #451a7a 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+}
+// ################# NAVBAR START
+#navbar {
+min-height: 50px;
+background-color: rgba(255, 255, 255, .75);  
+backdrop-filter: blur(10px);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 100;
+padding: 0px 10%;
+@include flexCenter(space-between, center);
+border-bottom: 1px solid #D3DDE0;
+
+.green400 {
+    z-index: 5;
+    color: #00DE7E;
+}
+
+.navbar-links {
+    overflow: hidden;
+    position: relative;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 12px;
+
+    li a{
+        text-decoration: none;
+        padding: 0 1rem;
+        color: $text-secondary;
+        display: block;
+    }
+
+    a:hover {
+        color: $text-primary;        
+    }
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: $text-primary;
+        border-radius: 10px;
+    }
+}
+
+ @media (max-width: $mb-width) {
+     .toggle-button {
+         display: flex;
+     }
+
+    
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
+        .brand {
+            margin-top: .75rem;
+            margin-left: 0;
+        }
+    
+
+     .navbar-links {
+        width: 100%;
+        display: none;
+        margin-top: 20px;
+        ul {
+            width: 100%;
+            flex-direction: column;
+        }
+        li {
+            text-align: center;
+            margin-bottom: 10px;
+            
+        }
+     }
+     .active {
+        display: flex;
+    }
+    .nav-style {
+        background-color: rgba(227, 246, 248, 0.75);
+        border-bottom: 10px solid rgba(32, 107, 116, 0.75);
+        }
+ }
+}
+// ################# NAVBAR END
+  
+// ################# TEXT CONTAINER GLOBAL START
+.text_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 10;
+    bottom: 0;
+
+    @media (max-width: $mb-width) {
+        margin: 1rem;
+    }
+    .title {
+        font-weight: 700;
+        font-size: $title;
+        color: $text-primary;
+        line-height: 1.2;
+        overflow-y: hidden;
+
+        @media (max-width: $mb-width) {
+            font-size: $mb-title;
+        }
+    }
+
+    .subtitle {
+        font-weight: 600;
+        font-size: $subtitle;
+        color: $text-primary;
+        align-items: left;
+
+        @media (max-width: $mb-width) {
+            // font-size: 18px;
+            font-size: $mb-subtitle;
+        }
+    }
+
+    .description {
+        margin: 1rem 0;
+        font-weight: 400;
+        font-size: $description;
+        color: $text-secondary;
+
+        @media (max-width: $mb-width) {
+            font-size: $mb-description;
+        }
+    }
+
+    .cta, .btn-link, button {
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+        background: none;
+        border: none;
+        
+        cursor: pointer;
+        color: $cta-main;
+        font-weight: 700;
+        font-size: $cta;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $mb-width) {
+            font-size: $mb-cta;
+        }
+    }
+
+    .cta_item:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+
+    .cta_item {
+        width: 100%;
+    }
+
+    .text-accent {
+        color: $text-accent;
+    }
+    .text-accent2 {
+        opacity: 0.7;
+    }
+}
+// ################# TEXT CONTAINER GLOBAL END
+
+// ################# IMAGES GLOBAL START
+.center-cropped {
+    position: absolute;
+    overflow: hidden;
+
+    img {
+        width: 100vw;
+    }
+  }
+// ################# IMAGES GLOBAL END
+
+// ################################################ SECTIONS START ################################################
+
+// ################# HERO START
+#hero {
+    scroll-snap-align: start;
+    position: relative;
+    height: calc(56vw - 50px);
+    width: 100vw;
+    z-index: 1;
+    border-bottom: $border solid 1rem;
+    overflow: hidden; /* hide the cropped portion */
+    padding: 0;
+    // @include flexCenter(center, center);
+
+    @media (max-width: $mb-width) {
+        min-height: calc(177vw - 50px);
+    }
+
+    .text_container {
+        position: absolute;
+        margin: 0 25vw;
+        // margin: auto;
+        bottom: 2vw;
+        width: 50%;
+
+        @media (max-width: $mb-width) {
+            width: 96vw;
+            margin: 0 2vw;
+            bottom: 10vw;
+        }
+    }
+    .title {
+        color: white;
+        line-height: 0.95;
+        padding-bottom: 10px;
+        
+    }
+    .subtitle {
+        color: #C9D8EE;
+        margin-bottom: 0px;
+        line-height: 0.95;
+        padding-bottom: 10px;
+        @media (max-width: $mb-width) {
+            margin: 2vw 9vw -1vw 9vw;
+        }
+    }
+    .cta .btn-link {
+        color: white;
+        align-items: center;
+        // margin-top: -20px;
+    }
+    .cta_item {
+        width: auto;
+        align-items: center;
+        margin-bottom: 0px;
+        color: white;
+    }
+}
+
+#hero-jobs {
+    margin-top: 50px;
+    @media (max-width: $mb-width) {
+        min-height: calc(150vw - 50px);
+    }
+    .cta_item a {
+        color: #fff;
+        font-size: small;
+    }
+    .cta_item:hover, a:hover {
+        text-decoration: none;
+        color: $cta-main;
+    }
+}
+// ################# HERO END
+
+
+// ################# ABOUT START
+#about, #about-jobs {
+    scroll-snap-align: start;
+    background-color: #fafafa;
+    // height: calc(100vh - 45px);
+    // padding: 0px;
+    max-width: 100vw;
+    border-bottom: $border solid 1rem;
+    @include flexCenter(center, center);
+
+    .description {
+        color: $text-primary;
+        font-weight: 700;
+        // font-size: 36px;
+        font-size: $description-lg;
+        text-align: left;
+        margin-top: 0;
+
+        @media (max-width: $mb-width) {
+            font-size: 6.5vw;
+        }
+    }
+
+    #about_us-logo {
+        margin: 3vw 0 2vw 0;
+        @media (max-width: $mb-width) {
+            margin: 6vw 0 2vw 0;
+        }
+    }
+
+    .cta {
+        text-align: left;
+        margin: 0 0 30 0;
+    }
+
+    .text-accent2 {
+        color: #542A2D;
+        opacity: 1;
+    }
+}
+
+#about-jobs {
+    // background-color: #F2F9FF;
+    
+    .description {
+        line-height: 1.2;
+        padding-bottom: 10px;
+    }
+    .subtitle {
+        text-align: left;
+        line-height: 1.2;
+        padding-bottom: 2vw;
+        color: $text-primary;
+        font-size: 2.2vw;
+        @media (max-width: $mb-width) {
+            font-weight: 600;
+            font-size: 5.5vw;
+            padding-bottom: 1vw;
+        }
+    }
+}
+// ################# ABOUT END
+
+// ################# OWNER START
+#owner {
+    padding-top: 70px;
+    scroll-snap-align: start;
+    background-color: #fafafa;
+    min-height: calc(100vh - 45px);
+    max-width: 100vw;
+    @include flexCenter(center, center);
+
+    img {
+        max-width: 40vh;
+    }
+
+    .description {
+        color: $text-primary;
+        font-weight: 700;
+        // font-size: 36px;
+        font-size: $description-lg;
+        text-align: left;
+        margin-top: 0;
+
+        @media (max-width: $mb-width) {
+            // font-size: 24px;
+            font-size: $mb-description-lg;
+        }
+    }
+
+    .quote {
+        scroll-snap-align: start;
+        background-color: #fafafa;
+        font-family: 'Vollkorn', serif;
+        // font-size: 20px;
+        font-size: $description;
+        font-style: italic;
+        font-weight: 600;
+        letter-spacing: normal;
+        // line-height: 30px;
+        text-transform: none;
+        color: $quote;
+        // border-bottom: $border solid 1rem;
+        margin-bottom: 1rem;
+
+        @media (max-width: $mb-width) {
+            font-size: $mb-description;
+        }
+    }
+    
+    .cta {
+        text-align: left;
+        margin: 0 0 30 0;
+        padding: 0;
+        .btn, .btn-link {
+            padding: 0;
+        }
+    }
+}
+
+#full_bio_modal {
+    img {
+        max-width: 40vh;
+    }
+
+    .modal-body {
+        @include flexCenter(center, center);
+        .modal-dialog {
+            padding: 0 !important;
+            margin: 0;
+        }
+        .description {
+            color: $text-primary;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: left;
+            margin-top: 0;
+    
+            @media (max-width: $mb-width) {
+                font-size: 20px;
+            }
+        }
+        .quote {
+            scroll-snap-align: start;
+            background-color: #fafafa;
+            font-family: 'Vollkorn', serif;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: normal;
+            text-align: left;
+            line-height: 30px;
+            text-transform: none;
+            color: $quote;
+            // border-bottom: $border solid 1rem;
+            margin-top: 1rem;
+            // margin-bottom: 1rem;
+        }
+    }
+}
+// ################# OWNER END
+
+// ################# SANDY LABS START
+
+#sandy_labs, #sandy_geo {
+    scroll-snap-align: start;
+    // background-color: #E6E6E6;
+    // background-color: #141414;
+    // min-height: calc(200vh - 45px);
+    width: 100vw;
+    margin-top: 50px;
+    // border-bottom: $text-primary solid 1rem;
+    // position: relative;
+    overflow: hidden;
+    @include flexCenter(center, center);
+
+    .examples {
+        text-align: center;
+    }
+    .text_container {
+        text-align: left;
+        .title {
+            margin-top: 4vw;
+            padding-bottom: 10px;
+        }
+        .subtitle {
+            margin-bottom: 2vw;
+            @media (max-width: $mb-width) {
+                margin-bottom: 5vw;
+            }
+        }
+    }
+    .example1 {
+        width: 40vw;
+        height: auto;
+        margin: 3vw 0;
+        display: block;
+        @media (max-width: $mb-width) {
+            width: 70vw;
+            height: auto;
+            margin: 9vw 0;
+        }
+    }
+
+    .example2 {
+        width: 40vw;
+        height: auto;
+        margin: 3vw 0;
+        display: block;
+        @media (max-width: $mb-width) {
+            width: 70vw;
+            height: auto;
+            margin: 9vw 0;
+        }
+    }
+
+    .example3 {
+        width: 30vw;
+        // height: auto;
+        margin: 3vw 0;
+        display: block;
+        @media (max-width: $mb-width) {
+            width: 70vw;
+            // height: auto;
+            margin: 9vw 0;
+        }
+    }
+}
+
+#sandy_labs {
+
+    margin: 10vw 0;
+}
+// ################# SANDY LABS END
+// ################################################ SECTIONS END ################################################
+
+// ################# FOOTER START
+ footer {
+     background-color: #F5F5F7;
+     padding: 30px 0 10px 0;
+
+     .container1 {
+        margin-left: 10%;
+        margin-right: 10%;
+        @media (max-width: $mb-width) {
+            margin: 1rem;
+        }
+     }
+     .row {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: flex-start;
+        //  align-content: space-around;
+         margin: 0 0 5px 0px;
+     }
+
+     .footer-col {
+         width: 25%;
+        //  padding: 0 15px;
+        margin-bottom: 20px;
+     }
+
+     //  Responsive
+@media(max-width: 767px){
+    .footer-col {
+        width: 50%;
+       //  padding: 0 15px;
+    }
+}
+
+@media(max-width: 574px){
+    .footer-col {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+       //  padding: 0 15px;
+    }
+}
+    .footer-heading {
+        color: #1D1D1F;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 7px;
+        
+    }
+
+
+    ul {
+        margin: 0;
+        padding: 0;
+        // display: flex;
+        font-size: 12px;
+        
+        // li {
+            
+        //     // padding: 3px 0 0 0;
+        //     // padding-top: 5px;
+        // }
+    
+        li a{
+            text-decoration: none;
+            // padding: 0 1rem;
+            color: $text-secondary;
+            transition: all 0.3s ease;
+            // position: relative;
+            // display: block;
+            // font-size: 10px;
+        }
+    
+        a:hover {
+            // background-color: #757575;
+            text-decoration: none;
+            color: $text-primary;
+            padding-left: 1px;
+            // -webkit-transform: scale(1.1);
+            // font-size: 13px;
+            
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    .social-links {
+        display: inline block;
+        font-size: 1.8rem;
+        // margin-top: 30px;
+        
+    }
+    .fab {
+       color: #1D1D1F;
+       padding-right: 10px;
+       transition: all 0.3s ease;
+    }
+
+    .fab:hover {
+        color: $text-secondary;
+        padding-bottom: 1px;
+    }
+
+    .terms {
+        display: flex;
+        flex-wrap: wrap;
+        .terms-text {
+            font-size: 12px;
+            margin-right: 15px;
+            margin-bottom: 5px;
+            color: $text-secondary;
+        }
+
+        @media(max-width: 574px){
+            .terms-text {
+                font-size: 10px;
+                width: 100%;
+            }
+        }
+
+    }
+ }
+// ################# FOOTER END
+
+.green400 {
+    color: #00DE7E;
+    position: absolute;
+    // top: -7px;
+    // overflow: visible;
+    // left: 50%;
+    // margin-right: 50vw;
+}
+
+iframe {
+    // width: 1120;
+    // height: 630;
+    width: 80vw;
+    height: 45vw;
+    margin-top: 8vw;
+    @media (max-width: $mb-width) {
+        width: calc(100vw - 2rem);
+        height: calc((100vw - 2rem)*0.5625);
+        margin-top: 12vw;
+    }
+}
+
+iframe:last-child {
+    margin-bottom: 0!important;
+    @media (max-width: $mb-width) {
+        margin-bottom: 0!important;
+    }
+}
