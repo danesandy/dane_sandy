@@ -35,9 +35,6 @@
                 <li><a href="#bio">Bio</a></li>
                 <li><a href="#geo">Sandy Geo</a></li>
                 <!-- <li><a href="#sandy_finance">Sandy Finance</a></li> -->
-                
-                <!-- <li><a href="/jobs.html">Jobs</a></li>
-                <li><a href="/sandy_labs.html">Sandy Labs <span class="material-icons md-18 green400">science</span></a></li> -->
                 <li><a data-toggle="modal" data-target="#contact_form_modal">Contact me</a></li>
             </ul>
         </div>
@@ -150,13 +147,11 @@
                     </div>
                     <ul>
                         <li><a href="https://sandyintelligence.com/" target="blank">sandyintelligence.com</a></li>
-                        <!-- <li><a href="#">danesandy.com</a></li>
-                        <li><a href="/sandy_labs.html">Sandy Labs <span class="material-icons md-18 green400">science</span></a></li> -->
-                    </ul>
+                         </ul>
                 </div>
                 <div class="footer-col">
                     <div class="footer-heading">
-                        <a data-toggle="modal" data-target="#contact_form_modal">Contact Us</a>
+                        <a data-toggle="modal" data-target="#contact_form_modal">Contact Me</a>
                     </div>
                     <ul>
                         <li><a href="mailto:danesandy10@gmail.com" target="blank">danesandy10@gmail.com</a></li>
@@ -200,7 +195,7 @@
       <div class="modal-content bg-light">
         <div class="modal-header">
             <img src="assets\S logo.svg" alt="logo" height="20px" width="auto">
-          <!-- <h5 class="modal-title" id="contact_form_modalLabel">-  Send us a message.</h5> -->
+          
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -245,7 +240,7 @@
       <div class="modal-content bg-light">
         <div class="modal-header">
             <img src="assets\S logo.svg" alt="logo" height="20px" width="auto">
-          <!-- <h5 class="modal-title" id="full_bio_modalLabel">-  Send us a message.</h5> -->
+    
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -292,7 +287,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <!-- <button type="submit" class="btn btn-primary">Send message</button> -->
         </div>
     </form>
       </div>
@@ -302,7 +296,6 @@
 
     <script type="text/javascript">
         (function() {
-            // https://dashboard.emailjs.com/admin/integration
             emailjs.init('user_hBlvDdJ4qtYa66auYld3H');
         })();
     </script>
@@ -312,15 +305,11 @@
             var x = document.getElementById("contact_alert");
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                // this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
+
                 emailjs.sendForm('service_wu9efji', 'contact_form', this)
                     .then(function() {
                         console.log('SUCCESS!');
-                        // window.location.href = '/index_real.html';
                         $('#contact_form_modal').modal('hide');
-                        // x.style.display = "block";
                         $('#contact_alert').show(1000);
                     
                     }, function(error) {
