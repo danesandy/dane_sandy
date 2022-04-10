@@ -18,13 +18,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
-    
-    <div class="alert alert-success collapse" id="contact_alert" role="alert" style="padding-top: 70px; margin-bottom: -60px">
-        You successfully sent us a message. Thank you :)
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="overflow: hidden;">
-            <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
 
       <section id="navbar">
         <div class="brand">
@@ -39,9 +32,10 @@
         </a>
         <div class="navbar-links">
             <ul class="active">
-                <li><a href="#sandy_geo">Sandy Geo</a></li>
-                <li><a href="#sandy_finance">Sandy Finance</a></li>
                 <li><a href="#bio">Bio</a></li>
+                <li><a href="#geo">Sandy Geo</a></li>
+                <!-- <li><a href="#sandy_finance">Sandy Finance</a></li> -->
+                
                 <!-- <li><a href="/jobs.html">Jobs</a></li>
                 <li><a href="/sandy_labs.html">Sandy Labs <span class="material-icons md-18 green400">science</span></a></li> -->
                 <li><a data-toggle="modal" data-target="#contact_form_modal">Contact me</a></li>
@@ -50,7 +44,40 @@
     </section>
     <div class="container_sandy">
     
-    <section id="sandy_labs">
+        <section id="owner">
+            <div class="illustration">
+                <img src="assets\owner\Dane Sandy.png" alt="">
+            </div>
+            <div class="text_container">
+            <div class="title">
+                Dane Sandy
+            </div>
+            
+            <div class="quote">
+                “Generating massive impact through innovation.”
+            </div>
+            <div class="subtitle" id="bio">
+                Bio
+            </div>
+            <div class="description">
+                Mr. Dane Sandy holds a BSc. In Mechanical and Manufacturing Engineering from the <span class="text-accent">University of the West Indies</span>, 
+                    an International Master’s in Business Administration specializing in International Finance from the 
+                    <span class="text-accent">Arthur Lok Jack Graduate School of Business</span>, and computer science certification from <span class="text-accent">Harvard University</span>; 
+                    however, Mr. Sandy considers himself a lifelong learner and claims that more than 90% of his knowledge and skills are self-taught.
+            </div>
+            <div class="cta">
+            <div class="cta_item">
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#full_bio_modal">See full bio ></button>
+            </div>
+            <div class="cta_item">
+                
+            </div>
+        </div>
+        </div>
+            
+        </section>
+
+    <!-- <section id="sandy_labs">
         <div class="text_container">
         <div class="title">
             Dane Sandy's Portfolio
@@ -62,11 +89,14 @@
             Dane has done and check back sometime in the near future to see the completed site. 👷🏽🚧😊
         </div>
     </div>
-    </section>
+    </section> -->
+
+
 
     <section id="sandy_geo">
         <div class="text_container">
-        <div class="title">
+            <div class="separator gradient">My work</div>
+        <div class="title" id="geo">
             Sandy Geo 
         </div>
         <div class="subtitle">
@@ -94,6 +124,8 @@
     
     </div>
     </section>
+
+    
 </div>
     
     
@@ -106,9 +138,10 @@
                         Site
                     </div>
                     <ul>
-                        <li><a href="#sandy_geo">Sandy Geo</a></li>
-                        <li><a href="#sandy_finance">Sandy Finance</a></li>
                         <li><a href="#bio">Bio</a></li>
+                        <li><a href="#sandy_geo">Sandy Geo</a></li>
+                        <!-- <li><a href="#sandy_finance">Sandy Finance</a></li> -->
+                        
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -205,6 +238,67 @@
       </div>
     </div>
   </div>
+
+<!-- MODAL: Full Bio -->
+<div class="modal fade" id="full_bio_modal" tabindex="-1" aria-labelledby="full_bio_modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-light">
+        <div class="modal-header">
+            <img src="assets\S logo.svg" alt="logo" height="20px" width="auto">
+          <!-- <h5 class="modal-title" id="full_bio_modalLabel">-  Send us a message.</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="illustration">
+                <img src="assets\owner\Dane Sandy.png" alt="" height="25%">
+            </div>
+            <div class="text_container">
+                <div class="title">
+                    Dane Sandy
+                </div>
+                
+                <div class="quote">
+                    “Generating massive impact through innovation.”
+                </div>
+            <div class="description">
+                Mr. Dane Sandy holds a BSc. In Mechanical and Manufacturing Engineering from the <span class="text-accent">University of the West Indies</span>, 
+                an International Master’s in Business Administration specializing in International Finance from the 
+                <span class="text-accent">Arthur Lok Jack Graduate School of Business</span>, and computer science certification from <span class="text-accent">Harvard University</span>; 
+                however, Mr. Sandy considers himself a lifelong learner and claims that more than 90% of his knowledge and skills are self-taught.
+                <br> 
+                <br> 
+                As a junior, Mr. Sandy was a <span class="text-accent">national athlete</span> and represented his country for the 100m and 200m sprints. 
+                From this age he learned the valuable discipline of setting goals, making plans and going the extra mile to reach his targets.
+                <br> 
+                <br> 
+                He is naturally gifted at <span class="text-accent">mathematics and problem solving</span>. Although he has won multiple top place awards for mathematics 
+                and additional mathematics at the high school level, one of the most concrete examples of his problem-solving strength was 
+                in winning the <span class="text-accent">UWI open scholarship exam</span>. The examination is akin to a more intense version of the SATs, consisting of tricky logic, 
+                mathematics and grammar questions to test aptitude. It is offered to both first year and incoming students and only the top two 
+                persons per faculty are selected. Mr. Sandy won for the faculty of engineering (1466 enrolled students along with incoming students). 
+
+            </div>
+            <div class="cta">
+            <div class="cta_item">
+                
+            </div>
+            <div class="cta_item">
+                
+            </div>
+        </div>
+        </div>         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="submit" class="btn btn-primary">Send message</button> -->
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL: Full Bio End-->
 
     <script type="text/javascript">
         (function() {
