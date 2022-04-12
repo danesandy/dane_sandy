@@ -172,7 +172,6 @@ ul {
         align-items: left;
 
         @media (max-width: $mb-width) {
-            // font-size: 18px;
             font-size: $mb-subtitle;
         }
     }
@@ -226,155 +225,8 @@ ul {
 }
 // ################# TEXT CONTAINER GLOBAL END
 
-// ################# IMAGES GLOBAL START
-.center-cropped {
-    position: absolute;
-    overflow: hidden;
-
-    img {
-        width: 100vw;
-    }
-  }
-// ################# IMAGES GLOBAL END
 
 // ################################################ SECTIONS START ################################################
-
-// ################# HERO START
-#hero {
-    scroll-snap-align: start;
-    position: relative;
-    height: calc(56vw - 50px);
-    width: 100vw;
-    z-index: 1;
-    border-bottom: $border solid 1rem;
-    overflow: hidden; /* hide the cropped portion */
-    padding: 0;
-    // @include flexCenter(center, center);
-
-    @media (max-width: $mb-width) {
-        min-height: calc(177vw - 50px);
-    }
-
-    .text_container {
-        position: absolute;
-        margin: 0 25vw;
-        // margin: auto;
-        bottom: 2vw;
-        width: 50%;
-
-        @media (max-width: $mb-width) {
-            width: 96vw;
-            margin: 0 2vw;
-            bottom: 10vw;
-        }
-    }
-    .title {
-        color: white;
-        line-height: 0.95;
-        padding-bottom: 10px;
-        
-    }
-    .subtitle {
-        color: #C9D8EE;
-        margin-bottom: 0px;
-        line-height: 0.95;
-        padding-bottom: 10px;
-        @media (max-width: $mb-width) {
-            margin: 2vw 9vw -1vw 9vw;
-        }
-    }
-    .cta .btn-link {
-        color: white;
-        align-items: center;
-        // margin-top: -20px;
-    }
-    .cta_item {
-        width: auto;
-        align-items: center;
-        margin-bottom: 0px;
-        color: white;
-    }
-}
-
-#hero-jobs {
-    margin-top: 50px;
-    @media (max-width: $mb-width) {
-        min-height: calc(150vw - 50px);
-    }
-    .cta_item a {
-        color: #fff;
-        font-size: small;
-    }
-    .cta_item:hover, a:hover {
-        text-decoration: none;
-        color: $cta-main;
-    }
-}
-// ################# HERO END
-
-
-// ################# ABOUT START
-#about, #about-jobs {
-    scroll-snap-align: start;
-    background-color: #fafafa;
-    // height: calc(100vh - 45px);
-    // padding: 0px;
-    max-width: 100vw;
-    border-bottom: $border solid 1rem;
-    @include flexCenter(center, center);
-
-    .description {
-        color: $text-primary;
-        font-weight: 700;
-        // font-size: 36px;
-        font-size: $description-lg;
-        text-align: left;
-        margin-top: 0;
-
-        @media (max-width: $mb-width) {
-            font-size: 6.5vw;
-        }
-    }
-
-    #about_us-logo {
-        margin: 3vw 0 2vw 0;
-        @media (max-width: $mb-width) {
-            margin: 6vw 0 2vw 0;
-        }
-    }
-
-    .cta {
-        text-align: left;
-        margin: 0 0 30 0;
-    }
-
-    .text-accent2 {
-        color: #542A2D;
-        opacity: 1;
-    }
-}
-
-#about-jobs {
-    // background-color: #F2F9FF;
-    
-    .description {
-        line-height: 1.2;
-        padding-bottom: 10px;
-    }
-    .subtitle {
-        text-align: left;
-        line-height: 1.2;
-        padding-bottom: 2vw;
-        color: $text-primary;
-        font-size: 2.2vw;
-        @media (max-width: $mb-width) {
-            font-weight: 600;
-            font-size: 5.5vw;
-            padding-bottom: 1vw;
-        }
-    }
-}
-// ################# ABOUT END
 
 // ################# OWNER START
 #owner {
@@ -387,7 +239,6 @@ ul {
     @include flexCenter(center, center);
 
     img {
-        // max-width: 70vh;
         height: 70vh;
         @media (max-width: $mb-width) {
             width: 80vw;
@@ -402,30 +253,24 @@ ul {
     .description {
         color: $text-primary;
         font-weight: 700;
-        // font-size: 36px;
         font-size: $description-lg;
         text-align: left;
         margin-top: 0;
 
         @media (max-width: $mb-width) {
-            // font-size: 24px;
             font-size: $mb-description-lg;
         }
     }
 
     .quote {
         scroll-snap-align: start;
-        // background-color: #fafafa;
         font-family: 'Vollkorn', serif;
-        // font-size: 20px;
         font-size: $description;
         font-style: italic;
         font-weight: 600;
         letter-spacing: normal;
-        // line-height: 30px;
         text-transform: none;
         color: $quote;
-        // border-bottom: $border solid 1rem;
         margin-bottom: 1rem;
 
         @media (max-width: $mb-width) {
@@ -467,19 +312,14 @@ ul {
         }
         .quote {
             scroll-snap-align: start;
-            // background-color: #fafafa;
             font-family: 'Vollkorn', serif;
             font-size: 20px;
             font-style: italic;
             font-weight: 600;
             letter-spacing: normal;
-            // text-align: left;
-            // line-height: 30px;
             text-transform: none;
             color: $quote;
-            // border-bottom: $border solid 1rem;
             margin-bottom: 1rem;
-            // margin-bottom: 1rem;
         }
     }
 }
@@ -489,13 +329,8 @@ ul {
 
 #sandy_labs, #sandy_geo {
     scroll-snap-align: start;
-    // background-color: #E6E6E6;
-    // background-color: #141414;
-    // min-height: calc(200vh - 45px);
     width: 100vw;
     margin-top: 50px;
-    // border-bottom: $text-primary solid 1rem;
-    // position: relative;
     overflow: hidden;
     @include flexCenter(center, center);
 
@@ -513,41 +348,6 @@ ul {
             @media (max-width: $mb-width) {
                 margin-bottom: 5vw;
             }
-        }
-    }
-    .example1 {
-        width: 40vw;
-        height: auto;
-        margin: 3vw 0;
-        display: block;
-        @media (max-width: $mb-width) {
-            width: 70vw;
-            height: auto;
-            margin: 9vw 0;
-        }
-    }
-
-    .example2 {
-        width: 40vw;
-        height: auto;
-        margin: 3vw 0;
-        display: block;
-        @media (max-width: $mb-width) {
-            width: 70vw;
-            height: auto;
-            margin: 9vw 0;
-        }
-    }
-
-    .example3 {
-        width: 30vw;
-        // height: auto;
-        margin: 3vw 0;
-        display: block;
-        @media (max-width: $mb-width) {
-            width: 70vw;
-            // height: auto;
-            margin: 9vw 0;
         }
     }
 }
@@ -688,29 +488,22 @@ ul {
 .green400 {
     color: #00DE7E;
     position: absolute;
-    // top: -7px;
-    // overflow: visible;
-    // left: 50%;
-    // margin-right: 50vw;
 }
 
-iframe {
-    // width: 1120;
-    // height: 630;
+iframe{
     width: 80vw;
     height: 45vw;
-    margin-top: 8vw;
+
     @media (max-width: $mb-width) {
         width: calc(100vw - 2rem);
         height: calc((100vw - 2rem)*0.5625);
-        margin-top: 12vw;
     }
 }
 
-iframe:last-child {
-    margin-bottom: 0!important;
+.iframe {
+    margin-top: 8vw;
     @media (max-width: $mb-width) {
-        margin-bottom: 0!important;
+        margin-top: 12vw;
     }
 }
 
@@ -727,5 +520,18 @@ iframe:last-child {
         letter-spacing: 6;
         font-size: $mb-title-spaced;
         margin: 6vw 0 20vw 0;
+    }
+}
+
+.skills { 
+    margin-bottom: 2vw;
+    .subtitle {
+        margin-bottom: 0 !important;
+        @media (max-width: $mb-width) {
+            margin-bottom: 0 !important;
+        }
+    }
+    .text-accent {
+        color: #A884AD;
     }
 }
