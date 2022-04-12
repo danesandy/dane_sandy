@@ -327,7 +327,7 @@ ul {
 
 // ################# SANDY LABS START
 
-#sandy_labs, #sandy_geo {
+#sandy_labs, #sandy_geo, #sandy_intelligence {
     scroll-snap-align: start;
     width: 100vw;
     margin-top: 50px;
@@ -363,6 +363,7 @@ ul {
  footer {
      background-color: #F5F5F7;
      padding: 30px 0 10px 0;
+     margin-top: 5vw;
 
      .container1 {
         margin-left: 10%;
@@ -497,6 +498,13 @@ iframe{
     @media (max-width: $mb-width) {
         width: calc(100vw - 2rem);
         height: calc((100vw - 2rem)*0.5625);
+    }
+}
+
+.SI_website_pic {
+    width: 80vw; 
+    @media (max-width: $mb-width) {
+        width: calc(100vw - 2rem);
     }
 }
 

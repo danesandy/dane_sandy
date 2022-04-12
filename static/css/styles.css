@@ -409,7 +409,7 @@ a {
   margin-bottom: 1rem;
 }
 
-#sandy_labs, #sandy_geo {
+#sandy_labs, #sandy_geo, #sandy_intelligence {
   scroll-snap-align: start;
   width: 100vw;
   margin-top: 50px;
@@ -431,25 +431,25 @@ a {
   align-items: center;
 }
 
-#sandy_labs .examples, #sandy_geo .examples {
+#sandy_labs .examples, #sandy_geo .examples, #sandy_intelligence .examples {
   text-align: center;
 }
 
-#sandy_labs .text_container, #sandy_geo .text_container {
+#sandy_labs .text_container, #sandy_geo .text_container, #sandy_intelligence .text_container {
   text-align: left;
 }
 
-#sandy_labs .text_container .title, #sandy_geo .text_container .title {
+#sandy_labs .text_container .title, #sandy_geo .text_container .title, #sandy_intelligence .text_container .title {
   margin-top: 4vw;
   padding-bottom: 10px;
 }
 
-#sandy_labs .text_container .subtitle, #sandy_geo .text_container .subtitle {
+#sandy_labs .text_container .subtitle, #sandy_geo .text_container .subtitle, #sandy_intelligence .text_container .subtitle {
   margin-bottom: 2vw;
 }
 
 @media (max-width: 850px) {
-  #sandy_labs .text_container .subtitle, #sandy_geo .text_container .subtitle {
+  #sandy_labs .text_container .subtitle, #sandy_geo .text_container .subtitle, #sandy_intelligence .text_container .subtitle {
     margin-bottom: 5vw;
   }
 }
@@ -461,6 +461,7 @@ a {
 footer {
   background-color: #F5F5F7;
   padding: 30px 0 10px 0;
+  margin-top: 5vw;
 }
 
 footer .container1 {
@@ -588,6 +589,16 @@ iframe {
   iframe {
     width: calc(100vw - 2rem);
     height: calc((100vw - 2rem)*0.5625);
+  }
+}
+
+.SI_website_pic {
+  width: 80vw;
+}
+
+@media (max-width: 850px) {
+  .SI_website_pic {
+    width: calc(100vw - 2rem);
   }
 }
 
