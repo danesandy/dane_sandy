@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Vollkorn:ital,wght@1,400;1,600;1,700&display=swap");
 *, div * {
   padding: 0%;
@@ -18,24 +17,11 @@ a {
   cursor: pointer;
 }
 
-@font-face {
-  font-family: Delicious;
-  src: url("Helvetica Neue LTW0697BlkCnObl.otf");
-}
-
 .gradient {
   background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#330867));
   background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.gradient2 {
-  background: -webkit-gradient(linear, left top, right top, from(#30CFD0), to(#451a7a));
-  background: linear-gradient(to right, #30CFD0 0%, #451a7a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-box-decoration-break: clone;
 }
 
 #navbar {
@@ -409,7 +395,7 @@ a {
   margin-bottom: 1rem;
 }
 
-#sandy_labs, #sandy_geo, #sandy_intelligence {
+#sandy_geo, #sandy_intelligence {
   scroll-snap-align: start;
   width: 100vw;
   margin-top: 50px;
@@ -431,31 +417,27 @@ a {
   align-items: center;
 }
 
-#sandy_labs .examples, #sandy_geo .examples, #sandy_intelligence .examples {
+#sandy_geo .examples, #sandy_intelligence .examples {
   text-align: center;
 }
 
-#sandy_labs .text_container, #sandy_geo .text_container, #sandy_intelligence .text_container {
+#sandy_geo .text_container, #sandy_intelligence .text_container {
   text-align: left;
 }
 
-#sandy_labs .text_container .title, #sandy_geo .text_container .title, #sandy_intelligence .text_container .title {
+#sandy_geo .text_container .title, #sandy_intelligence .text_container .title {
   margin-top: 4vw;
   padding-bottom: 10px;
 }
 
-#sandy_labs .text_container .subtitle, #sandy_geo .text_container .subtitle, #sandy_intelligence .text_container .subtitle {
+#sandy_geo .text_container .subtitle, #sandy_intelligence .text_container .subtitle {
   margin-bottom: 2vw;
 }
 
 @media (max-width: 850px) {
-  #sandy_labs .text_container .subtitle, #sandy_geo .text_container .subtitle, #sandy_intelligence .text_container .subtitle {
+  #sandy_geo .text_container .subtitle, #sandy_intelligence .text_container .subtitle {
     margin-bottom: 5vw;
   }
-}
-
-#sandy_labs {
-  margin: 10vw 0;
 }
 
 footer {
@@ -573,11 +555,6 @@ footer .terms .terms-text {
     font-size: 10px;
     width: 100%;
   }
-}
-
-.green400 {
-  color: #00DE7E;
-  position: absolute;
 }
 
 iframe {

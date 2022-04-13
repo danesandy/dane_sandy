@@ -2,15 +2,7 @@
     padding: 0%;
     margin: 0%;
     font-family: 'Poppins' ,'Open Sans', sans-serif;
-    // box-sizing: border-box;
-    overflow-x: hidden;
-    // font-family: "Helvetica Neue Medium Extended";
-    // font-family: 'Lato', Arial, Helvetica, sans-serif;
-
-    // -webkit-appearance: none;
-    // -moz-appearance: none;
-    // appearance: none;
-    
+    overflow-x: hidden; 
 }
 
 html {
@@ -21,11 +13,3 @@ html {
 a {
     cursor: pointer;
 }
-
-// button,
-// html input[type="button"], /* 1 */
-// input[type="reset"],
-// input[type="submit"] {
-//   -webkit-appearance: button; /* 2 */
-//   cursor: pointer; /* 3 */
-// }

@@ -36,8 +36,8 @@
             </ul>
         </div>
     </section>
-    <div class="container_sandy">
     
+    <div class="container_sandy">
         <section id="owner">
             <div class="illustration">
                 <img src="assets\owner\Dane Sandy.png" alt="">
@@ -67,8 +67,7 @@
                 
             </div>
         </div>
-        </div>
-            
+        </div>           
         </section>
 
     <section id="sandy_geo">
@@ -129,8 +128,8 @@
 
     <picture>
         <source media="(max-width: 849px)" srcset="assets\SI_mobile.png">
-        <source id="gait_analysis" media="(min-width: 850px)" srcset="assets\SI_desktop.png">
-        <img class="SI_website_pic" id="gait_analysis" src="assets\SI_mobile.png" alt="Website Image">
+        <source media="(min-width: 850px)" srcset="assets\SI_desktop.png">
+        <img class="SI_website_pic" src="assets\SI_mobile.png" alt="Website Image">
       </picture>
     </a>
     </section>
@@ -150,8 +149,7 @@
                         <li><a href="#bio">Bio</a></li>
                         <li><a href="#sandy_geo">Sandy Geo</a></li>
                         <li><a href="#sandy_intelligence">Sandy Intelligence</a></li>
-                        <!-- <li><a href="#sandy_finance">Sandy Finance</a></li> -->
-                        
+                        <!-- <li><a href="#sandy_finance">Sandy Finance</a></li> -->    
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -185,7 +183,6 @@
             </div>
         </div>
             <div class="row">
-            
                 <div class="terms">
                     <div class="terms-text">
                         Copyright © 2022 Dane Sandy. All rights reserved.
@@ -193,10 +190,8 @@
                     <div class="terms-text">
                         Terms of Use
                     </div>
-
-                </div>
-            
-        </div>
+                </div>         
+            </div>
         </div>
     </footer>
 <!-- FOOTER SECTION END-->
@@ -307,38 +302,6 @@
   </div>
   <!-- MODAL: Full Bio End-->
 
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('user_hBlvDdJ4qtYa66auYld3H');
-        })();
-    </script>
-    <script type="text/javascript">
-        
-        window.onload = function() {
-            var x = document.getElementById("contact_alert");
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                emailjs.sendForm('service_wu9efji', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                        $('#contact_form_modal').modal('hide');
-                        $('#contact_alert').show(1000);
-                    
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-                    
-                    
-                    
-
-            });
-        };
-
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-          })
-    </script>
     <script src="static\javascript\script.js"></script>
 </body>
 </html>
